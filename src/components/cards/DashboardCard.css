@@ -1,0 +1,8 @@
+.dashboard-card{
+    width: 200px;
+    display: flex;
+    padding: 12px 2rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
