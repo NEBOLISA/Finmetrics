@@ -1,8 +1,96 @@
 .dashboard-card{
-    width: 200px;
-    display: flex;
-    padding: 12px 2rem;
-    justify-content: space-between;
-    align-items: center;
+    width: 500px;
+
+    background-color: var(--users-card-bg);
+    
     border-radius: 8px;
 }
+.desc-card-wrapper{
+    color:var(--date-wrapper-clr); ;
+    display: flex;
+    padding: .6rem 12px 1rem 12px ;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-text-wrapper{
+    display:flex; 
+    gap:4px; 
+    margin-bottom:.5rem
+}
+.header-text-wrapper p{
+    font-size: small;
+    color: rgb(116, 116, 115);
+    
+}
+.number-text{
+     text-transform: capitalize;
+    font-weight:600; 
+    font-size:14px;
+}
+.right-card-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    font-size: 12px; 
+}
+.right-card-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+}
+
+.right-card-bottom p{
+   
+}
+.pie-wrapper{
+    width:200px;
+    height:200px;
+}
+.chart-wrapper{
+    width: 100%;
+    height: 250px;
+    
+}
+.chart-wrapper canvas{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100% !important;
+    /* height: 100% !important;
+    width: 100% !important; */
+}
+.date-wrapper{
+    margin-top: 1.2rem;
+    margin-left: 1rem;
+    color: var(--date-wrapper-clr);
+    border: var(--date-wrapper-b);
+    border-radius: 5px;
+    padding: 1px;
+    width: max-content;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: white;
+   
+   /* display: none; */
+}
+.start-date{
+    all: unset;
+    font-size: small;
+}
+.end-date{
+    all: unset;
+    font-size: small; 
+}
+/* @media (max-width: 1310px) {
+    .dashboard-card{
+        width: 100%;
+    }
+} */
+@media (max-width: 590px) {
+    .dashboard-card{
+        width:100%
+    }
+  }

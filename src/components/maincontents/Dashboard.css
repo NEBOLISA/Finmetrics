@@ -1,0 +1,19 @@
+.top-dashboard{
+    display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Space between items */
+  padding: 20px; 
+}
+@media (max-width: 1310px) {
+  .top-dashboard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+}
+@media (max-width: 590px) {
+  .top-dashboard{
+      width: 85vw;
+  }
+}

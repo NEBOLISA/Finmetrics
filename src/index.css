@@ -1,3 +1,70 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --button-bg: #007bff;
+  --button-text: #ffffff;
+  --button-hover-bg: rgb(227, 231, 248);
+  --button-hover-color:rgb(34, 16, 238);
+  --main-bg-color: rgb(248, 247, 247);
+  --side-options-ul-bg:rgb(255, 255, 255);
+  --side-options-hover-bg:rgb(227, 231, 248);
+  --side-options-hover-clr:rgb(34, 16, 238);
+  --side-border-r-color:solid 2px rgb(223, 229, 233);
+  --side-before-bg:#0047ab;
+  --logo-title-color:#000000;
+  --logo-color:rgb(34, 16, 238);
+  --top-border-b-color:solid 2px rgb(223, 229, 233);
+  --toggle-bg-clr:rgb(248, 247, 247);
+  --toggle-border-clr:none;
+  --toggle-active-clr:#fff;
+  --toggle-active-txt-clr:blue;
+  --ntn-wrapper-bg-clr:rgb(248, 247, 247);
+  --ntn-btn-clr:#000;
+  --left-header-wrapper-bg: rgb(248, 247, 247);
+  --left-header-wrapper-clr:#000;
+  --dropdown-wrapper-clr:#fff;
+  --dropdown-wrapper-bg:rgb(255, 255, 255);
+  --dropdown-li-clr:rgb(54, 53, 53);
+  --dropdowwn-li-br:.3px solid rgb(213, 212, 212);
+  --users-card-bg:white;
+  --date-wrapper-clr:black;
+  --date-wrapper-b: .5px solid black;
+}
+
+
+.dark-theme {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --button-bg: #444444;
+  --button-text: #ffffff;
+  --button-hover-bg: #666666;
+  --main-bg-color:rgb(33, 32, 32);
+  --side-options-ul-bg:black;
+  --side-options-hover-bg:rgb(75, 75, 75);
+  --side-options-hover-clr:rgb(189, 188, 194);
+  --side-border-r-color:solid 2px rgb(54, 54, 54);
+  --side-before-bg:#ffffff;
+  --logo-title-color:#fff;
+  --logo-color:#ffffff;
+  --top-border-b-color:solid 2px rgb(54, 54, 54);
+  --toggle-bg-clr:rgb(57, 57, 57);
+  --toggle-border-clr:1px solid #272626;
+  --toggle-active-clr:#000000;
+  --toggle-active-txt-clr:#fff;
+  --ntn-wrapper-bg-clr:rgb(57, 57, 57);
+  --ntn-btn-clr:#fff;
+  --left-header-wrapper-bg: rgb(169, 168, 168);
+  --left-header-wrapper-clr: #fff;
+  --dropdown-wrapper-clr:#fff;
+  --dropdown-wrapper-bg:rgb(33, 32, 32);
+  --dropdown-li-clr:rgb(251, 251, 251);
+  --dropdowwn-li-br:.3px solid rgb(91, 91, 91);
+  --users-card-bg:black;
+  --date-wrapper-clr:white;
+  --date-wrapper-b: .5px solid rgb(255, 255, 255);
+
+}
+
 body {
   margin: 0;
 

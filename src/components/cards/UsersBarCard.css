@@ -1,0 +1,17 @@
+.users-card{
+    width: 500px;
+   
+    background-color: var(--users-card-bg);
+    
+    border-radius: 8px;
+}
+/* @media (max-width: 1310px) {
+    .users-card{
+        width: 700px;
+    }
+} */
+@media (max-width: 590px) {
+    .users-card{
+        width: 100%;
+    }
+  }

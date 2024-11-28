@@ -1,0 +1,21 @@
+.transaction-card{
+    width: 500px;
+
+    background-color: var(--users-card-bg);
+    
+    border-radius: 8px;
+  
+}
+/* @media (max-width: 1310px) {
+    .transaction-card{
+        width: 700px;
+    }
+} */
+g {
+    fill: white;
+ }
+@media (max-width: 590px) {
+    .transaction-card{
+        width: 100%;
+    }
+  }

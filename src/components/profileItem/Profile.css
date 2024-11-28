@@ -1,0 +1,28 @@
+.profile-date-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    padding: .2rem .5rem;
+    border-radius: 6px;
+    color: var(--ntn-btn-clr);
+    background-color: var(--ntn-wrapper-bg-clr);
+    transition:background-color 0.3s ease-in-out;
+}
+.show{
+    display: none;
+}
+@media (max-width: 630px) {
+    .remove{
+    display: none;
+    }
+   
+}
+@media (max-width: 770px) {
+    .show{
+    display: flex;
+    margin-top: 1rem;
+    width: max-content;
+    }
+   
+}
