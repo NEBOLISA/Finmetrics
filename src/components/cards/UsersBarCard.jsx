@@ -15,6 +15,8 @@ Chart.register(CategoryScale,LinearScale,Legend,BarElement,Title,Tooltip);
 const UsersBarCard = () => {
   const {selectedCategory,startDate,endDate} = useContext(ContentContext);
   const [filteredDataByDate, setFilteredDataByDate] = useState([])
+  const[filteredData,setFilteredData] = useState([])
+  const[filteredData2,setFilteredData2] = useState([])
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: []
@@ -46,6 +48,13 @@ const UsersBarCard = () => {
     setFilteredDataByDate(filteredData)
    
   },[startDate,endDate])
+  useEffect(()=>{
+    const filteredData = filteredDataByDate.map((data) => data.userGain);
+    setFilteredData(filteredData)
+    
+    const filteredData2 = filteredDataByDate.map((data) => data.userLost);
+    setFilteredData2(filteredData2)
+  },[filteredDataByDate])
   useEffect(() => {
     const labels = Data[selectedCategory].map((data) => {
       if (selectedCategory === "yearly") return data.year;
@@ -53,12 +62,14 @@ const UsersBarCard = () => {
       if (selectedCategory === "monthly") return data.month;
       if (selectedCategory === "daily") return data.day;
     });
-  
+   
     const data = Data[selectedCategory].map((data) => data.userGain);
-    const data2 = Data[selectedCategory].map((data) => data.userGain);
-    const filteredData = filteredDataByDate.map((data) => data.userGain);
-    const filteredData2 = filteredDataByDate.map((data) => data.userLost);
-    console.log(filteredData)
+    const data2 = Data[selectedCategory].map((data) => data.userLost);
+  
+    
+    const dataForGainGraph = filteredData.length === 0? data: filteredData;
+    const dataForLossGraph = filteredData.length === 0? data2: filteredData2;
+    console.log(dataForGainGraph)
       const sum = data.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
       setTotalUsers(sum)
     setChartData({
@@ -66,7 +77,7 @@ const UsersBarCard = () => {
       datasets: [
         {
           label: "Users Gained",
-          data:`${filteredDataByDate.length === 0? data: filteredData}`,
+          data:dataForGainGraph,
           backgroundColor: [
             "rgba(75,192,192,1)",
             "green",
@@ -77,7 +88,7 @@ const UsersBarCard = () => {
         },
         {
           label: "Users Lost",
-          data:`${filteredDataByDate.length === 0? data2: filteredData2}`,
+          data:dataForLossGraph,
           backgroundColor: [
             "rgba(75,192,192,1)",
             "red",
@@ -89,7 +100,7 @@ const UsersBarCard = () => {
       ]
     });
     
-  }, [selectedCategory]);
+  }, [selectedCategory,startDate,endDate]);
 const chart =<Bar
 data={chartData}
 options={{
